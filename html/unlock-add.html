@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>添加解套方案</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container has-nav has-top-border">
+        <div class="u-input">
+            <div class="input-item clearfix">
+                <div class="input-label">重仓基金</div>
+                <div class="input-area">
+                    <input type="text" class="input-text" placeholder="请输入基金代码">
+                </div>
+            </div>
+            <div class="input-item clearfix">
+                <div class="input-label">基金金额</div>
+                <div class="input-area">
+                    <input type="text" class="input-text" placeholder="请输入基金总金额，保留小数点后两位">
+                </div>
+            </div>
+            <div class="input-item clearfix">
+                <div class="input-label">买入时间</div>
+                <div class="input-area">
+                    <input type="text" class="input-text" placeholder="请输入买入时间">
+                </div>
+            </div>
+        </div>
+        <div class="c-btn">
+            <button class="btn" id="commit-btn">提&nbsp;&nbsp;&nbsp;&nbsp;交</button>
+        </div>
+        <div class="dialog" style="display:none;">
+            <div class="dialog-wrap">
+                <i class="i-close" id="close-dialog"></i>
+                <div class="close-line"></div>
+                <div class="inv-title">
+                    <div class="inv-circle blue circle-blue">
+                        <p class="circle-t">定投</p>
+                        <p class="circle-desc-blue"><span class="imp-blue">2000.00</span> 元/月</p>
+                        <p class="circle-desc-blue">预计<span class="imp-blue">17</span>期解套</p>
+                    </div>
+                    <div class="inv-fit">
+                        <p class="circle-desc">根据您持仓浮亏状况及市场环境，<br>建议您采用定投方式解套</p>
+                    </div>
+                </div>
+                <div class="confirm-desc">您可以尝试从即日起，每月定投<span class="confirm-imp"> 2000.00 </span>元，连续定投<span class="confirm-imp"> 24 </span>个月预计可回本, <span class="confirm-imp"> 3-5 </span>年持续稳定盈利,回本后预计年化<span class="confirm-imp"> 12% </span></div>
+                <div class="c-btn clearfix">
+                    <a href="unlock.html" class="btn">确定使用该方案</a>
+                </div>
+                <div class="c-btn2">
+                    <a href="javascript:void(0)" class="btn-link" id="btn-link">再换个方案看看</a>
+                </div>
+            </div>
+        </div>
+        <ul class="nav">
+            <li><a href=""><div class="icon-wrap"><i class="i-money"></i></div><p class="nav-text">赚钱</p></a></li>
+            <li class="active"><a href="unlock.html"><div class="icon-wrap"><i class="i-unlock"></i></div><p class="nav-text">解套</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-base"></i></div><p class="nav-text">基歪</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-my"></i></div><p class="nav-text">我的</p></a></li>
+        </ul>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script>
+    $(function(){
+        $('#commit-btn').tap(function(){
+            $('.dialog').show();
+        });
+        $('#btn-link,#close-dialog').tap(function(){
+            $('.dialog').hide();
+        });
+    });
+    </script>
+</body>
+</html>
