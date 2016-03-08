@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>我要赚钱问题1</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container">
+        <p class="question">Q1：您比较偏好以下哪种投资模式？</p>
+        <div class="answer">
+            <ul>
+                <li>
+                    <span class="li-icon">A</span>
+                    <span class="li-text">最高收益5%，不亏损 </span>
+                </li>
+                <li>
+                    <span class="li-icon">B</span>
+                    <span class="li-text">可能的最高收益是20%，可能的最高亏损是5% </span>
+                </li>
+                <li>
+                    <span class="li-icon">C</span>
+                    <span class="li-text">可能最高收益80%，可能最高亏损30% </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script>
+    $(function(){
+        $('.answer li').tap(function(){
+            var self = $(this);
+            self.siblings('li').removeClass('active');
+            self.addClass('active');
+            setTimeout(function(){
+                location.href = 'make-money2.html';
+            },800);
+        });
+    });
+    </script>
+</body>
+</html>

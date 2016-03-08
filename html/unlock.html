@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>解套首页</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container has-nav has-top-border">
+        <ul class="unlock-list">
+            <li class="list-li clearfix">
+                <a class="list-li-wrap clearfix"  href="unlock-detail.html">
+                    <div class="list-l">
+                        <p class="list-t">易方达科讯混合</p>
+                        <p class="num">653970</p>
+                    </div>
+                    <div class="list-r">
+                        <p class="r-label">最新盈亏</p>
+                        <p class="r-total">-4.5万元（-27.13%）</p>
+                    </div>
+                </a>
+                <div class="list-remove">删除</div>
+            </li>
+            <li class="list-li clearfix">
+                <a class="list-li-wrap clearfix"  href="unlock-detail.html">
+                    <div class="list-l">
+                        <p class="list-t">易方达科讯混合</p>
+                        <p class="num">653970</p>
+                    </div>
+                    <div class="list-r">
+                        <p class="r-label">最新盈亏</p>
+                        <p class="r-total">-4.5万元（-27.13%）</p>
+                    </div>
+                </a>
+                <div class="list-remove">删除</div>
+            </li>
+        </ul>
+        <div class="c-btn">
+            <a class="btn-add" href="unlock-add.html">
+                <i class="i-add"></i>
+                <span class="btn-add-text">添加待解套基金</span>
+            </a>
+        </div>
+        <ul class="nav">
+            <li><a href=""><div class="icon-wrap"><i class="i-money"></i></div><p class="nav-text">赚钱</p></a></li>
+            <li class="active"><a href="unlock.html"><div class="icon-wrap"><i class="i-unlock"></i></div><p class="nav-text">解套</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-base"></i></div><p class="nav-text">基歪</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-my"></i></div><p class="nav-text">我的</p></a></li>
+        </ul>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script>
+    $(function(){
+        $('.list-remove').tap(function(){
+            $(this).parents('li').remove();
+        });
+        var startPosition, endPosition, deltaX, deltaY, moveLength;
+        $(".list-li").bind('touchstart', function(e){
+            console.log(e);
+            var touch = e.touches[0];
+            startPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+        }).bind('touchmove', function(e){
+            var touch = e.touches[0];
+            endPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            };
+
+            deltaX = endPosition.x - startPosition.x;
+            deltaY = endPosition.y - startPosition.y;
+            moveLength = Math.sqrt(Math.pow(Math.abs(deltaX), 2) + Math.pow(Math.abs(deltaY), 2));
+        }).bind('touchend', function(e){
+            if(deltaX < 0) { // 向左划动
+                $(this).addClass('has-remove');
+                deltaX = 0 ;
+            }
+        });
+    });
+    </script>
+</body>
+</html>

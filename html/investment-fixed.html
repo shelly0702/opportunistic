@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>定投</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="inv-title">
+            <div class="inv-circle green">
+                <p class="circle-t">定投</p>
+                <p class="circle-desc">您适合投基方式</p>
+            </div>
+            <div class="inv-fit">
+                <p class="fit-detail">指数型</p>
+                <p class="fit-label">适合投资的基金类型</p>
+            </div>
+        </div>
+        <div class="c-btn">
+            <a href="" class="btn">马上去看投资推荐</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>我要赚钱问题2</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container">
+        <p class="question">Q2：您计划基金投资期限是多长？</p>
+        <div class="answer">
+            <ul>
+                <li>
+                    <span class="li-icon">A</span>
+                    <span class="li-text">1年以内 </span>
+                </li>
+                <li>
+                    <span class="li-icon">B</span>
+                    <span class="li-text">1-3年 </span>
+                </li>
+                <li>
+                    <span class="li-icon">C</span>
+                    <span class="li-text">3-5年 </span>
+                </li>
+            </ul>
+        </div>
+        <div class="c-btn">
+            <a href="javascript:void(0)" class="btn" id="commit-btn">提交测评</a>
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script>
+    $(function(){
+        $('.answer li').tap(function(){
+            var self = $(this);
+            self.siblings('li').removeClass('active');
+            self.addClass('active');
+        });
+        $('#commit-btn').tap(function(){
+            var index = $('.answer li.active').index();
+            if(index == 0) {
+                location.href = 'investment-direct.html';
+            } else if (index == 1) {
+                location.href = 'investment-fixed.html';
+            } else if (index == 2) {
+                location.href = 'investment-strategic.html';
+            } else {
+                location.href = 'investment-direct.html';
+            }
+        });
+    });
+    </script>
+</body>
+</html>

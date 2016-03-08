@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>我的</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container has-nav has-top-border">
+        <div class="my-area">
+            <div class="my-l">
+                <img src="images/person.png" alt="" class="my-img">
+            </div>
+            <div class="my-r">
+                <p class="my-name">奔跑的基金侠</p>
+                <p class="my-tel">13879678907</p>
+                <i class="i-right-w"></i>
+            </div>
+        </div>
+        <ul class="my-menu">
+            <li>
+                <a href="">
+                    <i class="i-test"></i>
+                    <span class="menu-text">投资评测</span>
+                    <span class="menu-label">适合直投</span>
+                    <i class="i-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="i-card"></i>
+                    <span class="menu-text">我的帖子</span>
+                    <i class="i-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="i-comment"></i>
+                    <span class="menu-text">我的评论</span>
+                    <i class="i-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="i-like"></i>
+                    <span class="menu-text">我的收藏</span>
+                    <i class="i-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="i-set"></i>
+                    <span class="menu-text">设置</span>
+                    <i class="i-right"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav">
+            <li><a href=""><div class="icon-wrap"><i class="i-money"></i></div><p class="nav-text">赚钱</p></a></li>
+            <li><a href="unlock.html"><div class="icon-wrap"><i class="i-unlock"></i></div><p class="nav-text">解套</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-base"></i></div><p class="nav-text">基歪</p></a></li>
+            <li class="active"><a href="my.html"><div class="icon-wrap"><i class="i-my"></i></div><p class="nav-text">我的</p></a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

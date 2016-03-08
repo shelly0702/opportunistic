@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>解套详情</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container has-nav">
+        <div class="d-title">
+            <p class="d-t-text">易方达科讯混合</p>
+            <div class="d-page">
+                <span class="d-item curr"></span>
+                <span class="d-item"></span>
+                <span class="d-item"></span>
+            </div>
+            <a href="unlock.html"><i class="i-menu"></i></a>
+        </div>
+        <div class="inv-circle green circle-green">
+            <p class="circle-one"><span class="v-m">最新盈亏</span><i class="i-help"></i></p>
+            <p class="circle-two">-27.13%</p>
+            <p class="circle-three">-5400元</p>
+            <p class="circle-four">预计<span class="imp-orange">17</span>个月后解套</p>
+        </div>
+        <div class="chart"></div>
+        <ul class="unlock-list">
+            <li class="list-li detail clearfix">
+                <a href="unlock-history.html">
+                    <div class="list-li-wrap clearfix">
+                        <div class="u-total-t clearfix">
+                            <div class="u-col l"><span class="u-col-text">累计定投</span></div>
+                            <div class="u-col m"><span class="u-col-text">累计定投金额</span></div>
+                            <div class="u-col r"><span class="u-col-text">累计盈亏</span></div>
+                        </div>
+                        <div class="u-total-data clearfix">
+                            <div class="u-col l">19期</div>
+                            <div class="u-col m">8,000元</div>
+                            <div class="u-col r">-12.13%</div>
+                        </div>
+                    </div>
+                    <i class="i-right"></i>
+                </a>
+                
+            </li>
+        </ul>
+        <ul class="nav">
+            <li><a href=""><div class="icon-wrap"><i class="i-money"></i></div><p class="nav-text">赚钱</p></a></li>
+            <li class="active"><a href="unlock.html"><div class="icon-wrap"><i class="i-unlock"></i></div><p class="nav-text">解套</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-base"></i></div><p class="nav-text">基歪</p></a></li>
+            <li><a href=""><div class="icon-wrap"><i class="i-my"></i></div><p class="nav-text">我的</p></a></li>
+        </ul>
+    </div>
+</body>
+</html>

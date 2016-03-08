@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>选择状态</title>
+    <script>
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 640) {
+            deviceWidth = 640;
+        } else if (deviceWidth < 320) {
+            deviceWidth = 320;
+        }
+        document.documentElement.style.fontSize = deviceWidth / 3.2 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" media="all" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="s-label">
+            <p class="s-p">请先选择你的投资状态吧~</p>
+            <p class="s-p">小歪会根据你的投资状态为你推荐投基方案</p>
+        </div>
+        <div class="select-btn">
+            <a href="make-money1.html" class="s-btn make-money">赚钱</a>
+            <a href="unlock-add.html" class="s-btn out-box">解套</a>
+        </div>
+        <div class="s-common-btn">
+            <a href="" class="btn">我只想逛逛</a>
+        </div>
+    </div>
+</body>
+</html>

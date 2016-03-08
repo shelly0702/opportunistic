@@ -1,0 +1,9 @@
+{
+	"output":{
+		"compressPng":false,
+		"cssImagesUrlReplace": false
+	},
+	"localServerPort": 8081,
+	"cdn":""
+
+}
