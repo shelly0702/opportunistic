@@ -788,7 +788,7 @@ html {
 
 .unlock-list .list-remove {
   position: absolute;
-  right: 0;
+  right: -.685rem;
   top: 0;
   width: .685rem;
   height: .685rem;
@@ -798,15 +798,16 @@ html {
   text-align: center;
   font-size: .14rem;
   cursor: pointer;
-  display: none;
 }
 
 .unlock-list .list-li.has-remove .list-li-wrap {
   left: -.685rem;
+  transition: left .5s;
 }
 
 .unlock-list .list-li.has-remove .list-remove {
-  display: block;
+  right: 0;
+  transition: right .5s;
 }
 
 .unlock-list .list-t {
@@ -1433,4 +1434,72 @@ html {
   height: 1.5rem;
   background: url(i/chart-bg.png) no-repeat;
   background-size: 100% 100%;
+}
+.money-area {
+  height: 1.5915rem;
+  background: url(i/my-img-bg.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  text-align: center;
+  font-size: .22rem;
+  display:flex;
+  display: -webkit-flex;
+  align-items:center;
+}
+.money-area .money-text {
+  margin: 0 auto;
+}
+.money-list {
+  margin-top: .2rem; 
+}
+.money-list li {
+  position: relative;
+  padding: .2rem .17rem;
+  background-color: #22222a;
+  margin-bottom: .06rem;
+}
+.money-list .money-yearly {
+  width: .75rem;
+  text-align: center;
+  float: left;
+}
+.money-list .money-rate {
+  color: #fc6027;
+  font-size: .2rem;
+}
+.money-list .money-label {
+  color: #787878;
+  margin-top: .08rem;
+}
+.money-list .money-tit {
+  width: 1.7rem;
+  float: left;
+  margin-left: .3rem;
+}
+.money-list .money-tit .tit {
+  font-size: .14rem;
+  color: #fff;
+  height: .3rem;
+}
+.money-list .money-tit .money-flag  span{
+  border: 1px solid #00c6ff;
+  color: #00c6ff;
+  font-size: .1rem;
+  padding: 2px 10px ;
+  border-radius: 10px;
+}
+.chart-circle {
+  height: 1.535rem;
+  width: 100%;
+  background: url(i/chart-circle-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.con-time {
+  font-size: .07rem;
+  color: #fc6027;
+  padding: .1rem .12rem;
+  border-bottom: 1px solid #22222a;
+}
+.con-time p {
+  line-height: .2rem;
 }

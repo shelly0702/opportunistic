@@ -91,7 +91,7 @@
             moveLength = Math.sqrt(Math.pow(Math.abs(deltaX), 2) + Math.pow(Math.abs(deltaY), 2));
         }).bind('touchend', function(e){
             if(deltaX < 0) { // 向左划动
-                $(this).addClass('has-remove');
+                $(this).toggleClass('has-remove').siblings('li').removeClass('has-remove');
                 deltaX = 0 ;
             }
         });

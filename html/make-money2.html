@@ -47,24 +47,22 @@
     </div>
     <script src="../js/zepto.min.js"></script>
     <script>
-    $(function(){
-        $('.answer li').tap(function(){
-            var self = $(this);
-            self.siblings('li').removeClass('active');
-            self.addClass('active');
-        });
-        $('#commit-btn').tap(function(){
-            var index = $('.answer li.active').index();
-            if(index == 0) {
-                location.href = 'investment-direct.html';
-            } else if (index == 1) {
-                location.href = 'investment-fixed.html';
-            } else if (index == 2) {
-                location.href = 'investment-strategic.html';
-            } else {
-                location.href = 'investment-direct.html';
-            }
-        });
+    $('.answer li').tap(function(){
+        var self = $(this);
+        self.siblings('li').removeClass('active');
+        self.addClass('active');
+    });
+    $('#commit-btn').tap(function(){
+        var index = $('.answer li.active').index();
+        if(index == 0) {
+            location.href = 'investment-direct.html';
+        } else if (index == 1) {
+            location.href = 'investment-fixed.html';
+        } else if (index == 2) {
+            location.href = 'investment-strategic.html';
+        } else {
+            location.href = 'investment-direct.html';
+        }
     });
     </script>
 </body>

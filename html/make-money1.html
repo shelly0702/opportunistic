@@ -44,15 +44,13 @@
     </div>
     <script src="../js/zepto.min.js"></script>
     <script>
-    $(function(){
-        $('.answer li').tap(function(){
-            var self = $(this);
-            self.siblings('li').removeClass('active');
-            self.addClass('active');
-            setTimeout(function(){
-                location.href = 'make-money2.html';
-            },800);
-        });
+    $('.answer li').tap(function(){
+        var self = $(this);
+        self.siblings('li').removeClass('active');
+        self.addClass('active');
+        setTimeout(function(){
+            location.href = 'make-money2.html';
+        },800);
     });
     </script>
 </body>
