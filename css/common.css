@@ -1442,9 +1442,7 @@ html {
   color: #fff;
   text-align: center;
   font-size: .22rem;
-  display:flex;
-  display: -webkit-flex;
-  align-items:center;
+  padding-top: .7rem;
 }
 .money-area .money-text {
   margin: 0 auto;
